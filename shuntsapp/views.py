@@ -1,6 +1,6 @@
 import datetime
 from django.shortcuts import render
-from usersapp.models.CustomUser import CustomUser
+from shuntsapp.models.CustomUser import CustomUser
 from shuntsapp.models.Shunt import Shunt
 
 

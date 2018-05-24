@@ -16,3 +16,4 @@ class CustomUser(AbstractUser):
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
                                  message=_("El formato del número de teléfono es incorrecto"))
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
+

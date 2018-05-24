@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from usersapp.models import CustomUser
+from shuntsapp.models import CustomUser
 
 
 class CreateUserForm(forms.ModelForm):

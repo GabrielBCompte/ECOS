@@ -24,8 +24,8 @@ class Shunt(models.Model):
 
     content = models.FileField(verbose_name=_('Audio'))  # TODO: Añadir validadores
     creation_date = models.DateTimeField(verbose_name=_('Fecha de creacion'), default=timezone.now)
-    sender = models.ForeignKey('usersapp.CustomUser', verbose_name=_(u"Propietario"), related_name="shunts",
+    sender = models.ForeignKey('shuntsapp.CustomUser', verbose_name=_(u"Propietario"), related_name="shunts",
                                 on_delete=models.CASCADE)
-    receiver = models.ForeignKey('usersapp.CustomUser', verbose_name=_(u"Receptor"), related_name="received_",
+    receiver = models.ForeignKey('shuntsapp.CustomUser', verbose_name=_(u"Receptor"), related_name="received_",
                                   on_delete=models.CASCADE, blank=True, null=True)
     share_type = models.IntegerField(verbose_name=_(u"Tipo de elemento"), choices=SHUNT_TYPES)

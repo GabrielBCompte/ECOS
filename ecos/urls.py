@@ -18,6 +18,5 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^users/',  include(('usersapp.urls', 'usersapp'), namespace="users")),
-    url(r'^shunt/', include(('shunts.urls.urls', 'shuntsapp'), namespace="shunts"))
+    url(r'^shunt/', include(('shunts.urls', 'shuntsapp'), namespace="shunts"))
 ]
